@@ -16,7 +16,7 @@
 
 2,使用方法
   使用方法如下：
-  liaoxinxi@RCM-RSAS-V6-Dev ~/tools/auto_judge $ python judge_injection.py -h
+  liaoxinxi$ python judge_injection.py -h
   Usage: judge_injection.py [options]
 
   Options:
