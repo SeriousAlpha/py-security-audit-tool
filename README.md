@@ -1,5 +1,5 @@
 # 1,python的语法树  
-    根据王垠的python静态分析工具PySonar（https://github.com/yinwang0/pysonar2）得到静态语法树，这是一个庞大的dict结构，递归去除一些不必要的参数得到稍微简单点的一个语法树，以免影响后续分析。
+    根据王垠的python静态分析工具[PySonar](https://github.com/yinwang0/pysonar2)得到静态语法树，这是一个庞大的dict结构，递归去除一些不必要的参数得到稍微简单点的一个语法树，以免影响后续分析。
  这是文件test_lookuparg.py得到的解析树，body里面包含两个dict，每个dict都是一个函数，另外还有type字段表明这个节点的类型。
  下图是一个函数的基本实现：
   首先是”type”:”FunctionDef” 表明这一段代码是函数定义，函数中则会有args，表明函数的参数，lineno是代码所在的行，name是函数名。更详细的接口文档见https://greentreesnakes.readthedocs.org/en/latest/nodes.html 在这里包含了各个结构的定义，分析整个树就可以依照这个来实现。
